@@ -57,6 +57,8 @@ public class LoginTest {
         productsPage = loginPage.selectProduct();
         productsPage =loginPage.buyProduct();
         productsPage = loginPage.removeProduct();
+        productsPage = loginPage.checkoutProduct();
+
     }
 
 

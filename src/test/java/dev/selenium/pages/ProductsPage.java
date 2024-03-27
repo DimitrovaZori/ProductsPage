@@ -20,4 +20,4 @@ public class ProductsPage extends BasePage{
         return pageTitle.getText();
     }
 
-  }
+}

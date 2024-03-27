@@ -31,6 +31,10 @@ public class LoginPage extends BasePage {
     @FindBy (id = "remove-sauce-labs-backpack")
     private WebElement remove;
 
+    @FindBy (id = "checkout")
+    private WebElement checkout;
+
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -65,6 +69,11 @@ public class LoginPage extends BasePage {
 
     public ProductsPage removeProduct() {
         remove.click();
+        return new ProductsPage(driver);
+    }
+
+    public ProductsPage checkoutProduct() {
+        checkout.click();
         return new ProductsPage(driver);
     }
 
