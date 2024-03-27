@@ -31,6 +31,7 @@ public class LoginTest {
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
+        productsPage = new ProductsPage(driver);
 
         assertEquals(productsPage.getPageTitle(), "Products");
     }
