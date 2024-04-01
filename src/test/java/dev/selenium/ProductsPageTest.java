@@ -19,5 +19,4 @@ public class ProductsPageTest extends MainDriver{
         productsPage.header().openCartByIcon();
         }
 
-
 }
