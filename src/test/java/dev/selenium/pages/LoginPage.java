@@ -61,6 +61,7 @@ public class LoginPage extends BasePage {
         return new ProductsPage(driver);
     }
 
+
     public String getError() {
         return error.getText();
     }
@@ -83,5 +84,12 @@ public class LoginPage extends BasePage {
         return new ProductsPage(driver);
     }
 
+
+    public void loginAs(String userName, String password){
+        setUsername(userName);
+        setPassword(password);
+        clickLoginButton();
+
+    }
 
 }

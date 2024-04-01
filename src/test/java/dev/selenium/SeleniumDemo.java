@@ -8,35 +8,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.sql.ClientInfoStatus;
 import java.time.Duration;
+import java.util.List;
 
 public class SeleniumDemo {
     WebDriver driver;
+
     @BeforeMethod
-    public void before(){
-      driver = new ChromeDriver();
+    public void before() {
+        driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
     }
+
     @Test
-    public void testOpenBrowser(){
+    public void testOpenBrowser() throws InterruptedException {
+        Thread.sleep(2000);
+        List<WebElement> myList = driver.findElements(By.cssSelector("input"));
+        myList.get(2).click();
 
-        driver.getTitle();
+        Thread.sleep(3000);
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
-
-        WebElement textBox = driver.findElement(By.name("my-text"));
-        WebElement submitButton = driver.findElement(By.cssSelector("button"));
-
-        textBox.sendKeys("Selenium");
-        submitButton.click();
-
-        WebElement message = driver.findElement(By.id("message"));
-        message.getText();
-       
-    }
-
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
     }
 }

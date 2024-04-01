@@ -26,11 +26,7 @@ public class Actions {
 
         WebElement source = driver.findElement(By.id("column-a"));
         WebElement target = driver.findElement(By.id("column-b"));
-        Actions drag = new Actions(driver);
 
-        Thread.sleep(2000);
-
-        drag.clickAndHold (source).moveToElement(target).release().perform();
 
 
     }

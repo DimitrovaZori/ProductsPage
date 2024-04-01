@@ -4,7 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -13,7 +18,7 @@ public class Assert {
     @Test
      //Login-wrong
     public void wrongLogin() {
-        WebDriver driver = new ChromeDriver();
+        WebDriver  driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
 
         WebElement user = driver.findElement(By.name("user-name"));
@@ -35,13 +40,16 @@ public class Assert {
             driver.get("https://www.saucedemo.com/");
 
             WebElement user = driver.findElement(By.name("user-name"));
-            user.sendKeys("standard_user");
+            user.sendKeys("performance_glitch_user");
             WebElement pass = driver.findElement(By.id("password"));
             pass.sendKeys("secret_sauce");
             WebElement login = driver.findElement(By.id("login-button"));
             login.click();
 
+           WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+          WebElement logo =wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".app_logo")));
             WebElement text = driver.findElement(By.xpath("//*[contains(text(), 'Sauce Labs Bike Light')]"));
+           System.out.println(logo);
             String background = text.getCssValue("#fff");
             String txt = text.getText();
            System.out.println(txt);

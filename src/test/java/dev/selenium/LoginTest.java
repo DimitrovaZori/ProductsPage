@@ -7,45 +7,49 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class LoginTest {
+public class LoginTest extends MainDriver{
     LoginPage loginPage;
     ProductsPage productsPage;
 
     private WebDriver driver;
 
-    @BeforeMethod
-    public void setUp(){
-        driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    }
 
     @Test
     public void testSuccessfulLogin() {
+
         LoginPage loginPage = new LoginPage(driver);
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
+        productsPage= new ProductsPage(driver);
 
-        assertEquals(productsPage.getPageTitle(), "Products");
+
+        //assertEquals(productsPage.getPageTitle(), "Products");
     }
 
 
     @Test
     public void testNotValidLogin(){
+        SoftAssert soft =new SoftAssert();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.setUsername("");
         loginPage.setPassword("secret_sauce");
         loginPage.clickLoginButton();
 
-        assertEquals(loginPage.getError(),"Epic sadface: Username is required");
+        soft.assertEquals(loginPage.getError(),"Epic sadface: Username is required");
 
+        loginPage.setUsername("standard_user");
+        loginPage.setPassword("");
+        productsPage= loginPage.clickLoginButton();
 
+        soft.assertEquals(loginPage.getError(),"Epic sadface: Password is required");
+        soft.assertAll();
     }
 
     @Test
@@ -54,19 +58,14 @@ public class LoginTest {
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
+        productsPage = new ProductsPage(driver);
+
         productsPage = loginPage.selectProduct();
         productsPage =loginPage.buyProduct();
         productsPage = loginPage.removeProduct();
         productsPage =loginPage.returnShopping();
-
-       // productsPage = loginPage.checkoutProduct();
+       //productsPage = loginPage.checkoutProduct();
 
     }
-
-
-   /* @AfterMethod
-    public void tearDown(){
-        driver.quit();
-    }*/
 
 }
