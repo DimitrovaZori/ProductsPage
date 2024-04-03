@@ -1,8 +1,10 @@
 package dev.selenium.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -15,6 +17,18 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public void waitForElementToBePresent (WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitForElementToBeStale(WebElement element){
+        wait.until(ExpectedConditions.stalenessOf(element));
+    }
+
+    public void scrollWithJS(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
 }
