@@ -5,26 +5,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductsPage extends BasePage{
+public class ProductsPage extends BasePage {
 
 
     @FindBy(className = "title")
     private WebElement pageTitle;
 
-    public ProductsPage(WebDriver driver){
-       super(driver);
+    public ProductsPage(WebDriver driver) {
+        super(driver);
 
     }
 
-    public String getPageTitle(){
+    public String getPageTitle() {
 
         return pageTitle.getText();
     }
-       public HeaderComponent header(){
+
+    public HeaderComponent header() {
         return new HeaderComponent(driver);
     }
 
-    public HeaderComponent header(){
-        return new HeaderComponent(driver);
-    }
 }

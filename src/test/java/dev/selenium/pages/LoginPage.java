@@ -42,7 +42,7 @@ public class LoginPage extends BasePage {
     }
 
 
-    public void setUsername(String username) {
+    public void setUsername(String username){
         usernameInput.sendKeys(username);
     }
 

@@ -1,11 +1,12 @@
 package dev.selenium;
 
+import dev.selenium.base.MainTest;
 import dev.selenium.pages.LoginPage;
 import dev.selenium.pages.ProductsPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ProductsPageTest extends MainDriver{
+public class ProductsPageTest extends MainTest {
     ProductsPage productsPage;
     @BeforeMethod
     public void loginBefore(){
