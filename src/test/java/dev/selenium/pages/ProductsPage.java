@@ -20,6 +20,9 @@ public class ProductsPage extends BasePage{
 
         return pageTitle.getText();
     }
+       public HeaderComponent header(){
+        return new HeaderComponent(driver);
+    }
 
     public HeaderComponent header(){
         return new HeaderComponent(driver);
