@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [Test Demo Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="classes" name="Selenium Course Suite tests(failed)" verbose="0">
+    <classes>
+      <class name="dev.selenium.tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testNotValidLogin"/>
+        </methods>
+      </class> <!-- dev.selenium.tests.LoginTest -->
+    </classes>
+  </test> <!-- Selenium Course Suite tests(failed) -->
+</suite> <!-- Failed suite [Test Demo Suite] -->

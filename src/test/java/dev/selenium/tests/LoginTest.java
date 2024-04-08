@@ -44,7 +44,7 @@ public class LoginTest extends MainTest {
 
     @Test
     public void testSuccessful() {
-        LoginPage loginPage = new LoginPage();
+        loginPage = new LoginPage();
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
@@ -54,11 +54,5 @@ public class LoginTest extends MainTest {
         productsPage = loginPage.checkoutProduct();
 
     }
-
-
-   /* @AfterMethod
-    public void tearDown(){
-        driver.quit();
-    }*/
 
 }
