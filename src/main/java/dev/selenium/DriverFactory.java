@@ -24,6 +24,7 @@ public class DriverFactory {
         options.addArguments("--ignore-certificate-errors");
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.DISMISS);
         options.setExperimentalOption("mobileEmulation",mobileEmulation);
+        // options.addArguments("headless=true"); taka nqma da se startirat browserite, a shte se testva po-burzo
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
