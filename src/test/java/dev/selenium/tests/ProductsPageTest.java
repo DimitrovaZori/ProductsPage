@@ -10,13 +10,13 @@ public class ProductsPageTest extends MainTest {
     ProductsPage productsPage;
     @BeforeMethod
     public void loginBefore(){
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.loginAs("standard_user","secret_sauce");
     }
 
     @Test
     public void canOpenCart(){
-        productsPage = new ProductsPage(driver);
+        productsPage = new ProductsPage();
         productsPage.header().openCartByIcon();
 
         }

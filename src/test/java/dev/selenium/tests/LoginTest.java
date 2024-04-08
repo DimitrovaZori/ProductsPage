@@ -27,11 +27,11 @@ public class LoginTest {
 
     @Test
     public void testSuccessfulLogin() {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
-        productsPage = new ProductsPage(driver);
+        productsPage = new ProductsPage();
 
         assertEquals(productsPage.getPageTitle(), "Products");
     }
@@ -39,7 +39,7 @@ public class LoginTest {
 
     @Test
     public void testNotValidLogin(){
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.setUsername("");
         loginPage.setPassword("secret_sauce");
         loginPage.clickLoginButton();
@@ -51,7 +51,7 @@ public class LoginTest {
 
     @Test
     public void testSuccessful() {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage();
         loginPage.setUsername("standard_user");
         loginPage.setPassword("secret_sauce");
         productsPage= loginPage.clickLoginButton();
