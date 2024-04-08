@@ -37,10 +37,6 @@ public class LoginPage extends BasePage {
     @FindBy (id = "checkout")
     private WebElement checkout;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
-
 
     public void setUsername(String username){
         usernameInput.sendKeys(username);
@@ -53,12 +49,12 @@ public class LoginPage extends BasePage {
 
     public ProductsPage clickLoginButton() {
         loginButton.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
 
     public ProductsPage selectProduct() {
         product.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
 
 
@@ -67,21 +63,21 @@ public class LoginPage extends BasePage {
     }
     public ProductsPage buyProduct() {
         choosenProduct.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
 
     public ProductsPage removeProduct() {
         remove.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
     public ProductsPage returnShopping() {
         shopping.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
 
     public ProductsPage checkoutProduct() {
         checkout.click();
-        return new ProductsPage(driver);
+        return new ProductsPage();
     }
 
 

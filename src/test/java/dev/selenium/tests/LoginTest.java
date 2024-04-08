@@ -1,4 +1,4 @@
-package dev.selenium;
+package dev.selenium.tests;
 
 import dev.selenium.pages.LoginPage;
 import dev.selenium.pages.ProductsPage;

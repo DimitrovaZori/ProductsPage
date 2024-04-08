@@ -1,4 +1,4 @@
-package dev.selenium;
+package dev.selenium.tests;
 
 import dev.selenium.base.MainTest;
 import dev.selenium.pages.LoginPage;
@@ -18,6 +18,7 @@ public class ProductsPageTest extends MainTest {
     public void canOpenCart(){
         productsPage = new ProductsPage(driver);
         productsPage.header().openCartByIcon();
+
         }
 
 }

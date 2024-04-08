@@ -21,15 +21,17 @@ import java.util.Properties;
 
 public class MainTest {
 
-    public WebDriver driver;
+    //  public WebDriver driver;
     private String url;
     private int implicitWait;
     private String browser;
+
     @BeforeMethod
     public void setUp() {
-       setupBrowserDriver();
-       loadUrl();
+        setupBrowserDriver();
+        loadUrl();
     }
+
     private void setupBrowserDriver() {
         try (FileInputStream configFile = new FileInputStream("src/test/resources/config.properties")) {
             Properties config = new Properties();
@@ -42,33 +44,37 @@ public class MainTest {
         }
         switch (browser) {
             case "chrome":
-                driver = DriverFactory.getChromeDriver(implicitWait);
+                DriverFactory.setChromeDriver(implicitWait);
                 break;
             case "firefox":
-                driver = DriverFactory.getFirefoxDriver(implicitWait);
+                DriverFactory.setFirefoxDriver(implicitWait);
             default:
                 throw new IllegalStateException("Unsupported browser type");
         }
-        }
-        private void loadUrl(){
-            driver.get(url);
-        }
+    }
+
+    private void loadUrl() {
+
+        WebDriver driver = DriverFactory.getDriver();
+        driver.get(url);
+    }
 
     @AfterMethod
     public void tearDown(ITestResult result) {
-        if(ITestResult.FAILURE == result.getStatus()){
+        WebDriver driver = DriverFactory.getDriver();
+        if (ITestResult.FAILURE == result.getStatus()) {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File source = ts.getScreenshotAs(OutputType.FILE);
-            String timestamp =new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date());
-            String fileName = result.getName() + "_"+ timestamp +".png";
-            try{
+            String timestamp = new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date());
+            String fileName = result.getName() + "_" + timestamp + ".png";
+            try {
                 FileUtils.copyFile(source, new File("./Screenshots/" + fileName));
                 System.out.println("Screenshot taken: " + fileName);
 
-            } catch(IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        driver.quit();
+        DriverFactory.quitDriver();
     }
 }

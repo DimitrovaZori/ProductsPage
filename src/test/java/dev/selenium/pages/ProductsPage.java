@@ -11,10 +11,7 @@ public class ProductsPage extends BasePage {
     @FindBy(className = "title")
     private WebElement pageTitle;
 
-    public ProductsPage(WebDriver driver) {
-        super(driver);
 
-    }
 
     public String getPageTitle() {
 
@@ -22,7 +19,7 @@ public class ProductsPage extends BasePage {
     }
 
     public HeaderComponent header() {
-        return new HeaderComponent(driver);
+        return new HeaderComponent();
     }
 
 }
