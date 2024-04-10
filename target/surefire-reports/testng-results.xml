@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-08T20:13:08 EEST" name="Test Demo Suite" finished-at="2024-04-08T20:13:17 EEST" duration-ms="8963">
+  <suite started-at="2024-04-08T21:31:01 EEST" name="Test Demo Suite" finished-at="2024-04-08T21:31:11 EEST" duration-ms="9682">
     <groups>
     </groups>
-    <test started-at="2024-04-08T20:13:08 EEST" name="Selenium Course Suite tests" finished-at="2024-04-08T20:13:17 EEST" duration-ms="8963">
+    <test started-at="2024-04-08T21:31:01 EEST" name="Selenium Course Suite tests" finished-at="2024-04-08T21:31:11 EEST" duration-ms="9682">
       <class name="dev.selenium.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:08 EEST" name="setUp" finished-at="2024-04-08T20:13:11 EEST" duration-ms="2825" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:01 EEST" name="setUp" finished-at="2024-04-08T21:31:06 EEST" duration-ms="4677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNotValidLogin()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:11 EEST" name="testNotValidLogin" finished-at="2024-04-08T20:13:11 EEST" duration-ms="644" status="PASS">
+        <test-method signature="testNotValidLogin()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:06 EEST" name="testNotValidLogin" finished-at="2024-04-08T21:31:06 EEST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNotValidLogin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:11 EEST" name="tearDown" finished-at="2024-04-08T20:13:12 EEST" duration-ms="388" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:06 EEST" name="tearDown" finished-at="2024-04-08T21:31:06 EEST" duration-ms="195" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:12 EEST" name="setUp" finished-at="2024-04-08T20:13:13 EEST" duration-ms="1767" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:06 EEST" name="setUp" finished-at="2024-04-08T21:31:08 EEST" duration-ms="1550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSuccessful()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:13 EEST" name="testSuccessful" finished-at="2024-04-08T20:13:14 EEST" duration-ms="947" status="PASS">
+        <test-method signature="testSuccessful()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:08 EEST" name="testSuccessful" finished-at="2024-04-08T21:31:09 EEST" duration-ms="817" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessful -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:14 EEST" name="tearDown" finished-at="2024-04-08T20:13:15 EEST" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:09 EEST" name="tearDown" finished-at="2024-04-08T21:31:09 EEST" duration-ms="96" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,15 +45,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:15 EEST" name="setUp" finished-at="2024-04-08T20:13:16 EEST" duration-ms="1571" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:09 EEST" name="setUp" finished-at="2024-04-08T21:31:10 EEST" duration-ms="1480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulLogin()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:16 EEST" name="testSuccessfulLogin" finished-at="2024-04-08T20:13:17 EEST" duration-ms="457" status="PASS">
+        <test-method signature="testSuccessfulLogin()[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:10 EEST" name="testSuccessfulLogin" finished-at="2024-04-08T21:31:11 EEST" duration-ms="383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulLogin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T20:13:17 EEST" name="tearDown" finished-at="2024-04-08T20:13:17 EEST" duration-ms="169" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.LoginTest@7193666c]" started-at="2024-04-08T21:31:11 EEST" name="tearDown" finished-at="2024-04-08T21:31:11 EEST" duration-ms="76" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,19 +66,19 @@
         </test-method> <!-- tearDown -->
       </class> <!-- dev.selenium.tests.LoginTest -->
       <class name="dev.selenium.tests.ProductsPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T20:13:08 EEST" name="setUp" finished-at="2024-04-08T20:13:11 EEST" duration-ms="2813" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T21:31:01 EEST" name="setUp" finished-at="2024-04-08T21:31:05 EEST" duration-ms="4308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loginBefore()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T20:13:11 EEST" name="loginBefore" finished-at="2024-04-08T20:13:11 EEST" duration-ms="533" status="PASS">
+        <test-method is-config="true" signature="loginBefore()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T21:31:05 EEST" name="loginBefore" finished-at="2024-04-08T21:31:06 EEST" duration-ms="777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginBefore -->
-        <test-method signature="canOpenCart()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T20:13:11 EEST" name="canOpenCart" finished-at="2024-04-08T20:13:11 EEST" duration-ms="250" status="PASS">
+        <test-method signature="canOpenCart()[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T21:31:06 EEST" name="canOpenCart" finished-at="2024-04-08T21:31:06 EEST" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- canOpenCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T20:13:11 EEST" name="tearDown" finished-at="2024-04-08T20:13:12 EEST" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:dev.selenium.tests.ProductsPageTest@6356695f]" started-at="2024-04-08T21:31:06 EEST" name="tearDown" finished-at="2024-04-08T21:31:06 EEST" duration-ms="115" status="PASS">
           <params>
             <param index="0">
               <value>
