@@ -62,12 +62,6 @@ public class LoginTest extends MainTest {
 
       assertEquals(loginPage.getError(), error);
 
-        loginPage.setUsername(user);
-        loginPage.setPassword(pass);
-        loginPage.clickLoginButton();
-
-      assertEquals(loginPage.getError(),error);
-
     }
 
     @Test
